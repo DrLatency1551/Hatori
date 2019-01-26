@@ -1,0 +1,66 @@
+// 颜色
+//——————————————————————
+$white: #FFFFFF !default;
+$black: #080808 !default;
+$pink: #F596AA !default;
+$warning: #FFB11B !default;
+$link: #0F2540 !default;
+$info: #005CAF !default;
+$primary: #81C7D4 !default;
+$dark: #1C1C1C !default;
+$gray: #828282 !default;
+$colors: ($white
+$black,
+$pink,
+$warning,
+$link,
+$info,
+$primary,
+$dark);
+$name: (white,
+black,
+pink,
+warning,
+link,
+info,
+primary,
+dark);
+//日本传统颜色
+$momo: rgb(63, 39, 44); //桃
+$sakura: #FEDFE1; //桜
+$kurenai: #CB1B45; //紅
+$akabono: #F19483; //曙
+$ake: #CC543A; //緋
+$shishi: #F0A986; //宍
+$kurumi: #947A6D; //胡(桃)
+$yamabuki: #FFB11B; //山吹
+$nae: #838A2D; //苗
+$midori: #227D51; //緑
+$tetsu: #26453D; //鉄
+$mizu: #81C7D4; //水
+$ai: #0D5661; //藍
+$sora: #58B2DC; //空
+$hanada: #006284; //縹
+$kon: #0F2540; //紺
+$kachi: #08192D; //褐
+$ruri: #005CAF; //瑠璃
+$fuji: #8B81C3; //藤
+$kikyo: #6A4C9C; //桔梗
+$shion: #8F77B5; //紫苑
+$sumire: #66327C; //菫
+$hai: #828282; //灰
+$murasaki: #592C63; //紫
+$sumi: #1C1C1C; //墨
+$kuro: #080808; //黑
+
+//———————————————————————
+// 颜色 is-bg-color
+@for $a from 1 to 8 {
+    $b: nth($name, $a);
+    .is-#{$b} {
+        color: #{nth($colors,$a)};
+    }
+    .is-bg-#{$b} {
+        color: #{nth($colors,$a)};
+    }
+}

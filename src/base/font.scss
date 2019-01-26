@@ -1,0 +1,82 @@
+// 文字font
+//——————————————————————
+$font-size: 1.2em;
+$base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
+$mono-font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace !default;
+$fallback-font-family: "Helvetica Neue", sans-serif !default;
+$cjk-zh-hans-font-family: $base-font-family, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei"!default;
+$cjk-zh-hant-font-family: $base-font-family, "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei"!default;
+$cjk-jp-font-family: $base-font-family, "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo!default;
+$cjk-ko-font-family: $base-font-family, "Malgun Gothic"!default;
+//——————————————————————
+//样式
+body{
+    font-size: $font-size;
+	color: #333;
+    line-height: 1.75em; 
+    font-family: $cjk-zh-hans-font-family,$cjk-jp-font-family;
+}
+
+// 颜色 is-text-color
+@for $a from 1 to 8 {
+    $b: nth($name, $a);
+    .is-text-#{$b} {
+        color: #{nth($colors,$a)};
+    }
+}
+// 位置 has-text
+$alignments: ('centered': 'center', 'justified': 'justify', 'left': 'left', 'right': 'right');
+@each $alignment,
+$text-align in $alignments {
+    .has-text-#{$alignment} {
+        text-align: #{$text-align} !important;
+    }
+}
+
+@each $alignment,
+$text-align in $alignments {
+    +mobile .has-text-#{$alignment}-mobile {
+        text-align: #{$text-align} !important;
+    }
+    +tablet .has-text-#{$alignment}-tablet {
+        text-align: #{$text-align} !important;
+    }
+    +tablet-only .has-text-#{$alignment}-tablet-only {
+        text-align: #{$text-align} !important;
+    }
+    +touch .has-text-#{$alignment}-touch {
+        text-align: #{$text-align} !important;
+    }
+    +desktop .has-text-#{$alignment}-desktop {
+        text-align: #{$text-align} !important;
+    }
+    +desktop-only .has-text-#{$alignment}-desktop-only {
+        text-align: #{$text-align} !important;
+    }
+    +widescreen .has-text-#{$alignment}-widescreen {
+        text-align: #{$text-align} !important;
+    }
+    +widescreen-only .has-text-#{$alignment}-widescreen-only {
+        text-align: #{$text-align} !important;
+    }
+    +fullhd .has-text-#{$alignment}-fullhd {
+        text-align: #{$text-align} !important;
+    }
+}
+
+// 样式
+.is-capitalized {
+    text-transform: capitalize !important;
+}
+
+.is-lowercase {
+    text-transform: lowercase !important;
+}
+
+.is-uppercase {
+    text-transform: uppercase !important;
+}
+
+.is-italic {
+    font-style: italic !important;
+}
