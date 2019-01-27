@@ -3,7 +3,7 @@
 @import '../variables';
 //———————————————————————
 @mixin button-variant($color: $primary-color) {
-  background: $ag-color;
+  background: $bg-color;
   border-color: darken($color, 3%);
   color: $light;
   &:focus {
@@ -31,8 +31,8 @@
 
 @mixin button-outline-variant($color: $primary-color) {
   background: $light;
-  border-color: $ag-color;
-  color: $ag-color;
+  border-color: $bg-color;
+  color: $bg-color;
   &:focus {
     @include control-shadow($color);
   }
@@ -40,18 +40,18 @@
   &:hover {
     background: lighten($color, 50%);
     border-color: darken($color, 2%);
-    color: $ag-color;
+    color: $bg-color;
   }
   &:active,
   &.active {
-    background: $ag-color;
+    background: $bg-color;
     border-color: darken($color, 5%);
     color: $light;
   }
   &.loading {
     &::after {
-      border-bottom-color: $ag-color;
-      border-left-color: $ag-color;
+      border-bottom-color: $bg-color;
+      border-left-color: $bg-color;
     }
   }
 }

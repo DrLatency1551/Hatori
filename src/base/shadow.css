@@ -1,0 +1,39 @@
+.has-shadow {
+  -webkit-box-shadow: 4px 4px 20px 2px rgba(8, 8, 8, 0.15);
+  box-shadow: 4px 4px 20px 2px rgba(8, 8, 8, 0.15);
+}
+
+.has-shadow:hover {
+  -webkit-box-shadow: 4px 4px 20px 2px rgba(8, 8, 8, 0.35);
+  box-shadow: 4px 4px 20px 2px rgba(8, 8, 8, 0.35);
+}
+
+.has-shadow-blue {
+  -webkit-box-shadow: 0px 4px 30px rgba(15, 37, 64, 0.4);
+  box-shadow: 0px 4px 30px rgba(15, 37, 64, 0.4);
+}
+
+.has-shadow-blue:hover {
+  -webkit-box-shadow: 0px 7px 30px rgba(0, 92, 175, 0.75);
+  box-shadow: 0px 7px 30px rgba(0, 92, 175, 0.75);
+}
+
+.has-shadow-red {
+  -webkit-box-shadow: 0px 4px 30px rgba(204, 84, 58, 0.15);
+  box-shadow: 0px 4px 30px rgba(204, 84, 58, 0.15);
+}
+
+.has-shadow-red:hover {
+  -webkit-box-shadow: 0px 7px 30px rgba(204, 84, 58, 0.35);
+  box-shadow: 0px 7px 30px rgba(204, 84, 58, 0.35);
+}
+
+.has-shadow-card {
+  -webkit-box-shadow: 0 8px 17px 0 rgba(8, 8, 8, 0.2), 0 6px 20px 0 rgba(8, 8, 8, 0.15);
+  box-shadow: 0 8px 17px 0 rgba(8, 8, 8, 0.2), 0 6px 20px 0 rgba(8, 8, 8, 0.15);
+}
+
+.has-shadow-card:hover {
+  -webkit-box-shadow: 0 8px 17px 0 rgba(8, 8, 8, 0.4), 0 6px 20px 0 rgba(8, 8, 8, 0.3);
+  box-shadow: 0 8px 17px 0 rgba(8, 8, 8, 0.4), 0 6px 20px 0 rgba(8, 8, 8, 0.3);
+}

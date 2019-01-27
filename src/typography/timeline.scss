@@ -1,0 +1,46 @@
+// span
+//———————————————————————
+@import '../base/variables';
+@import '../base/mixins/shadow';
+
+//———————————————————————
+.timeline {
+  list-style: none;
+}
+
+/* for Desktop */
+@media (min-width:940px) {
+  .timeline>li {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0em;
+    position: relative;
+    margin-bottom: 0em;
+  }
+
+  .timeline-date {
+    width: 5.75em;
+    float: left;
+    margin-top: 1.25em;
+    padding-right: 0.5em;
+  }
+
+  .timeline-content {
+    width: 80%;
+    float: left;
+    border-left: 0.1em $bg-color-light solid;
+    padding-left: 1em;
+  }
+
+  .timeline-content:before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    color: $bg-color;
+    background: $bg-color-dark;
+    position: absolute;
+    left: 5.8em;
+    top: 1.5em;
+    border-radius: 100%;
+  }
+}

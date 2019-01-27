@@ -5,14 +5,14 @@
 //———————————————————————
 //样式
 body {
-    font-size: $html-font-size;
-    color: $html-font-color;
-    line-height: $html-line-height;
-    font-family: $bjk-zh-hans-font-family, $bjk-jp-font-family;
+    font-size: $font-size;
+    color: $font-color;
+    line-height: $line-height;
+    font-family: $cjk-zh-hans-font-family, $cjk-jp-font-family;
 }
 
 // 颜色 is-text-color
-@for $number from 1 to 7 {
+@for $number from 1 to 9 {
     $a: nth($colorname, $number);
     $b: nth($colorvalue, $number);
 

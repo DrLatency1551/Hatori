@@ -3,17 +3,17 @@
 @import '../base/variables';
 @import '../base/mixins/shadow';
 @import '../base/mixins/button';
-$autton-bg-color: #ff0081 * $ag-color;
+$button-bg-color: #ff0081 * $bg-color;
 //———————————————————————
 .btn {
-  font-family: $aase-font-family;
+  font-family: $font-family;
   font-size: $font-size-lg;
   padding: $unit-3 $unit-9;
   margin-top: 1rem;
   margin-bottom: 0.6rem;
   -webkit-appearance: none;
   appearance: none;
-  background-color: $autton-bg-color;
+  background-color: $button-bg-color;
   color: $light;
   border-radius: 4px;
   border: none;
@@ -40,15 +40,15 @@ $autton-bg-color: #ff0081 * $ag-color;
     display: none;
     top: -75%;
     background-image:  
-      radial-gradient(circle, $ag-color 20%, transparent 20%),
-    radial-gradient(circle,  transparent 20%, $ag-color 20%, transparent 30%),
-    radial-gradient(circle, $ag-color 20%, transparent 20%), 
-    radial-gradient(circle, $ag-color 20%, transparent 20%),
-    radial-gradient(circle,  transparent 10%, $ag-color 15%, transparent 20%),
-    radial-gradient(circle, $ag-color 20%, transparent 20%),
-    radial-gradient(circle, $ag-color 20%, transparent 20%),
-    radial-gradient(circle, $ag-color 20%, transparent 20%),
-    radial-gradient(circle, $ag-color 20%, transparent 20%);
+      radial-gradient(circle, $bg-color 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, $bg-color 20%, transparent 30%),
+    radial-gradient(circle, $bg-color 20%, transparent 20%), 
+    radial-gradient(circle, $bg-color 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, $bg-color 15%, transparent 20%),
+    radial-gradient(circle, $bg-color 20%, transparent 20%),
+    radial-gradient(circle, $bg-color 20%, transparent 20%),
+    radial-gradient(circle, $bg-color 20%, transparent 20%),
+    radial-gradient(circle, $bg-color 20%, transparent 20%);
   background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
   //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
   }
@@ -57,20 +57,20 @@ $autton-bg-color: #ff0081 * $ag-color;
     display: none;
     bottom: -75%;
     background-image:  
-    radial-gradient(circle, $ag-color 20%, transparent 20%), 
-    radial-gradient(circle, $ag-color 20%, transparent 20%),
-    radial-gradient(circle,  transparent 10%, $ag-color 15%, transparent 20%),
-    radial-gradient(circle, $ag-color 20%, transparent 20%),
-    radial-gradient(circle, $ag-color 20%, transparent 20%),
-    radial-gradient(circle, $ag-color 20%, transparent 20%),
-    radial-gradient(circle, $ag-color 20%, transparent 20%);
+    radial-gradient(circle, $bg-color 20%, transparent 20%), 
+    radial-gradient(circle, $bg-color 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, $bg-color 15%, transparent 20%),
+    radial-gradient(circle, $bg-color 20%, transparent 20%),
+    radial-gradient(circle, $bg-color 20%, transparent 20%),
+    radial-gradient(circle, $bg-color 20%, transparent 20%),
+    radial-gradient(circle, $bg-color 20%, transparent 20%);
   background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
   //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
   }
  
   &:active{
     transform: scale(0.9);
-    background-color: darken($autton-bg-color, 5%);
+    background-color: darken($button-bg-color, 5%);
     box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
   }
   
@@ -87,7 +87,7 @@ $autton-bg-color: #ff0081 * $ag-color;
 }
 
   // Button Colors
-  @for $number from 1 to 7 {
+  @for $number from 1 to 9 {
     $a: nth($colorname, $number);
     $b: nth($colorvalue,$number);
     $c: mix($dark,$b,10%);
@@ -133,14 +133,14 @@ $autton-bg-color: #ff0081 * $ag-color;
   // Button Sizes
   .btn-sm {
     font-size: $font-size-sm;
-    height: $bontrol-size-sm;
-    padding: $bontrol-padding-y-sm $bontrol-padding-x-sm;
+    height: $control-size-sm;
+    padding: $control-padding-y-sm $control-padding-x-sm;
   }
 
   .btn-lg {
     font-size: $font-size-lg;
-    height: $bontrol-size-lg;
-    padding: $bontrol-padding-y-lg $bontrol-padding-x-lg;
+    height: $control-size-lg;
+    padding: $control-padding-y-lg $control-padding-x-lg;
   }
 
   // Button Block
@@ -151,16 +151,16 @@ $autton-bg-color: #ff0081 * $ag-color;
 
   // Button Action
   .btn-action {
-    width: $bontrol-size;
+    width: $control-size;
     padding-left: 0;
     padding-right: 0;
 
     &.btn-sm {
-      width: $bontrol-size-sm;
+      width: $control-size-sm;
     }
 
     &.btn-lg {
-      width: $bontrol-size-lg;
+      width: $control-size-lg;
     }
   }
 
@@ -180,7 +180,7 @@ $autton-bg-color: #ff0081 * $ag-color;
 
     &:focus,
     &:hover {
-      background: rgba($ag-color, .5);
+      background: rgba($bg-color, .5);
       opacity: .95;
     }
 
@@ -202,12 +202,12 @@ $autton-bg-color: #ff0081 * $ag-color;
     }
     &:not(:first-child):not(:last-child) {
       border-radius: 0;
-      margin-left: -$aorder-width;
+      margin-left: -$border-width;
     }
     &:last-child:not(:first-child) {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
-      margin-left: -$aorder-width;
+      margin-left: -$border-width;
     }
     &:focus,
     &:hover,

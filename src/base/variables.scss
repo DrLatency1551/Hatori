@@ -26,33 +26,32 @@ $hai: #828282; //灰
 $murasaki: #592C63; //紫
 $sumi: #1C1C1C; //墨
 $kuro: #080808; //黑
-$kurotobi: #554236;//黒鳶
-$hanaba: #F7C242;//花葉
+$kurotobi: #554236; //黒鳶
+$hanaba: #F7C242; //花葉
 
-
-$light: #FFFFFB!default;
+$light: #FFFFFB !default;
 $white: #FFF !default;
-$alack: $kuro !default;
+$black: $kuro !default;
 $pink: $momo !default;
 $warning: $yamabuki !default;
 $link: $kon !default;
 $info: $ruri !default;
 $primary: #5755d9 !default;
-$dark: $kuro !default;
+$dark: rgb(40, 44, 52) !default;
 $gray: $hai !default;
 $cisable:$kurotobi !default;
-$error:$ake!default;
-$success:$hanaba!default;
+$error:$ake !default;
+$success:$hanaba !default;
 
 $gray: lighten($dark, 40%) !default;
 $gray-dark: darken($gray, 25%) !default;
 $gray-light: lighten($gray, 20%) !default;
 
-$aorder: lighten($dark, 60%) !default;
-$aorder-dark: darken($aorder, 10%) !default;
-$ag-color: lighten($dark, 66%) !default;
-$ag-color-dark: darken($ag-color, 3%) !default;
-$ag-color-light: $light !default;
+$border: lighten($dark, 60%) !default;
+$border-dark: darken($border, 10%) !default;
+$bg-color: lighten($dark, 66%) !default;
+$bg-color-dark: darken($bg-color, 10%) !default;
+$bg-color-light: lighten($bg-color, 10%) !default;
 
 $primary-color: $primary;
 $primary-dark: darken($primary, 3%) !default;
@@ -61,35 +60,34 @@ $secondary: lighten($primary, 37.5%) !default;
 $secondary-dark: darken($secondary, 3%) !default;
 $secondary-light: lighten($secondary, 3%) !default;
 
-$colorvalue:(
-$white,
-$alack,
+$colorvalue:($white,
+$black,
 $pink,
 $warning,
 $link,
 $info,
 $primary,
-$dark,);
+$dark, );
 
-$colorname: (
-white,
+$colorname: (white,
 black,
 pink,
 warning,
 link,
 info,
 primary,
-dark,);
+dark, );
 // text.scss
-$html-font-color: #333;
-$html-font-size: 1.2em !default;
-$html-line-height: 1.5em !default;
-$font-size: .8rem !default;
-$font-size-sm: .7rem !default;
-$font-size-lg: .9rem !default;
+$font-color-light: #EEE !default;
+$font-color: #333 !default;
+$font-size: 1.2em !default;
+$line-height: 1.5em !default;
+$font-size: 1.2rem !default;
+$font-size-sm: 1.5rem !default;
+$font-size-lg: 1.8rem !default;
 $line-height: 1.2rem !default;
 
-$aase-font-family: -apple-system,
+$font-family: -apple-system,
 system-ui,
 BlinkMacSystemFont,
 "Segoe UI",
@@ -102,63 +100,77 @@ Courier,
 monospace !default;
 $fallback-font-family: "Helvetica Neue",
 sans-serif !default;
-$bjk-zh-hans-font-family: $aase-font-family,
+$cjk-zh-hans-font-family: $font-family,
 "PingFang SC",
 "Hiragino Sans GB",
 "Microsoft YaHei" !default;
-$bjk-zh-hant-font-family: $aase-font-family,
+$cjk-zh-hant-font-family: $font-family,
 "PingFang TC",
 "Hiragino Sans CNS",
 "Microsoft JhengHei" !default;
-$bjk-jp-font-family: $aase-font-family,
+$cjk-jp-font-family: $font-family,
 "Hiragino Sans",
 "Hiragino Kaku Gothic Pro",
 "Yu Gothic",
 YuGothic,
 Meiryo !default;
-$bjk-ko-font-family: $aase-font-family,
+$cjk-ko-font-family: $font-family,
 "Malgun Gothic" !default;
 
-// unit sizes
-$unit-o: .05rem !default;
-$unit-h: .1rem !default;
-$unit-1: .2rem !default;
-$unit-2: .4rem !default;
-$unit-3: .6rem !default;
-$unit-4: .8rem !default;
-$unit-5: 1rem !default;
-$unit-6: 1.2rem !default;
-$unit-7: 1.4rem !default;
-$unit-8: 1.6rem !default;
-$unit-9: 1.8rem !default;
-$unit-10: 2rem !default;
-$unit-12: 2.4rem !default;
-$unit-16: 3.2rem !default;
+// Unit sizes
+$unit-o: .05em !default;
+$unit-h: .1em !default;
+$unit-1: .2em !default;
+$unit-2: .4em !default;
+$unit-3: .6em !default;
+$unit-4: .8em !default;
+$unit-5: 1em !default;
+$unit-6: 1.2em !default;
+$unit-7: 1.4em !default;
+$unit-8: 1.6em !default;
+$unit-9: 1.8em !default;
+$unit-10: 2em !default;
+$unit-12: 2.4em !default;
+$unit-16: 3.2em !default;
 
+// Sizes
+$small: 480px;
+$medium: 768px;
+$large: 992px;
+$x-large: 1200px;
 
-// size
 $layout-spacing: $unit-2 !default;
 $layout-spacing-sm: $unit-1 !default;
 $layout-spacing-lg: $unit-4 !default;
-$aorder-radius: $unit-h !default;
-$aorder-width: $unit-o !default;
-$aorder-width-lg: $unit-h !default;
-$bontrol-size: $unit-9 !default;
-$bontrol-size-sm: $unit-7 !default;
-$bontrol-size-lg: $unit-10 !default;
-$bontrol-padding-x: $unit-2 !default;
-$bontrol-padding-x-sm: $unit-2 * .75 !default;
-$bontrol-padding-x-lg: $unit-2 * 1.5 !default;
-$bontrol-padding-y: ($bontrol-size - $line-height) / 2 - $aorder-width !default;
-$bontrol-padding-y-sm: ($bontrol-size-sm - $line-height) / 2 - $aorder-width !default;
-$bontrol-padding-y-lg: ($bontrol-size-lg - $line-height) / 2 - $aorder-width !default;
-$bontrol-icon-size: .8rem !default;
+$border-radius: $unit-h !default;
+$border-width: $unit-o !default;
+$border-width-lg: $unit-h !default;
+$control-size: $unit-9 !default;
+$control-size-sm: $unit-7 !default;
+$control-size-lg: $unit-10 !default;
+$control-padding-x: $unit-2 !default;
+$control-padding-x-sm: $unit-2 * .75 !default;
+$control-padding-x-lg: $unit-2 * 1.5 !default;
+$control-padding-y: ($control-size - $line-height) / 2 - $border-width !default;
+$control-padding-y-sm: ($control-size-sm - $line-height) / 2 - $border-width !default;
+$control-padding-y-lg: ($control-size-lg - $line-height) / 2 - $border-width !default;
+$control-icon-size: .8rem !default;
 
-$bontrol-width-xs: 180px !default;
-$bontrol-width-sm: 320px !default;
-$bontrol-width-md: 640px !default;
-$bontrol-width-lg: 960px !default;
-$bontrol-width-xl: 1280px !default;
+$control-width-xs: 180px !default;
+$control-width-sm: 320px !default;
+$control-width-md: 640px !default;
+$control-width-lg: 960px !default;
+$control-width-xl: 1280px !default;
+
+// Responsive breakpoints
+$size-xs: 480px !default;
+$size-sm: 600px !default;
+$size-md: 840px !default;
+$size-lg: 960px !default;
+$size-xl: 1280px !default;
+$size-2x: 1440px !default;
+
+$responsive-breakpoint: $size-xs !default;
 
 // Z-index
 $zindex-0: 1 !default;

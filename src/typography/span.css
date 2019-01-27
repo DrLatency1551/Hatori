@@ -1,0 +1,34 @@
+.colors div {
+  margin-top: 3px;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  float: left; }
+
+.colors div span {
+  width: 15px;
+  height: 15px;
+  display: block;
+  border-radius: 50%; }
+
+.colors div span:hover {
+  width: 17px;
+  height: 17px;
+  margin: -1px 0 0 -1px; }
+
+.c-blue span {
+  background: #81C7D4; }
+
+.c-red span {
+  background: #CB1B45; }
+
+.c-green span {
+  background: #227D51; }
+
+.c-white span {
+  background: #FEDFE1;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #828282; }
+
+

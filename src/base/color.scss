@@ -4,10 +4,11 @@
 @import 'variables';
 //———————————————————————
 // 颜色 is-bg-color
-@for $number from 1 to 7 {
+@for $number from 1 to 9 {
     $a: nth($colorname, $number);
     $b: nth($colorvalue, $number);
     $c: darken($b, 10%);
+    $d: lighten($b, 20%);
 
     .is-#{$a} {
         color: $b;
@@ -21,7 +22,15 @@
         color: $c;
     }
 
+    .is-#{$a}-light {
+        color: $d;
+    }
+
     .is-bg-#{$a}-dark {
         background-color: $c;
+    }
+    
+    .is-bg-#{$a}-light {
+        background-color: $d;
     }
 }
