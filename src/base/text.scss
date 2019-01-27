@@ -1,0 +1,137 @@
+// 文字 font
+// 定义文字基本css与有关修饰符
+//———————————————————————
+@import 'variables';
+//———————————————————————
+//样式
+body {
+    font-size: $html-font-size;
+    color: $html-font-color;
+    line-height: $html-line-height;
+    font-family: $bjk-zh-hans-font-family, $bjk-jp-font-family;
+}
+
+// 颜色 is-text-color
+@for $number from 1 to 7 {
+    $a: nth($colorname, $number);
+    $b: nth($colorvalue, $number);
+
+    .is-text-#{$a} {
+        color: $b;
+    }
+}
+
+// 位置 has-text
+$numberlignments: ('centered': 'center', 'justified': 'justify', 'left': 'left', 'right': 'right');
+
+@each $numberlignment,
+$text-align in $numberlignments {
+    .has-text-#{$numberlignment} {
+        text-align: #{$text-align} !important;
+    }
+}
+
+@each $numberlignment,
+$text-align in $numberlignments {
+    +mobile .has-text-#{$numberlignment}-mobile {
+        text-align: #{$text-align} !important;
+    }
+
+    +tablet .has-text-#{$numberlignment}-tablet {
+        text-align: #{$text-align} !important;
+    }
+
+    +tablet-only .has-text-#{$numberlignment}-tablet-only {
+        text-align: #{$text-align} !important;
+    }
+
+    +touch .has-text-#{$numberlignment}-touch {
+        text-align: #{$text-align} !important;
+    }
+
+    +desktop .has-text-#{$numberlignment}-desktop {
+        text-align: #{$text-align} !important;
+    }
+
+    +desktop-only .has-text-#{$numberlignment}-desktop-only {
+        text-align: #{$text-align} !important;
+    }
+
+    +widescreen .has-text-#{$numberlignment}-widescreen {
+        text-align: #{$text-align} !important;
+    }
+
+    +widescreen-only .has-text-#{$numberlignment}-widescreen-only {
+        text-align: #{$text-align} !important;
+    }
+
+    +fullhd .has-text-#{$numberlignment}-fullhd {
+        text-align: #{$text-align} !important;
+    }
+}
+
+// 样式
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+// Text transform utilities
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+// Text style utilities
+.text-normal {
+    font-weight: normal;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-large {
+    font-size: 1.2em;
+}
+
+// Text overflow utilities
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-clip {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+.text-break {
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+}

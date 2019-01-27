@@ -1,0 +1,62 @@
+// 转换
+// 样式转换有关修饰符
+//——————————————————————
+// 放置 is-pulled
+.is-pulled-left {
+    float: left !important;
+}
+
+.is-pulled-right {
+    float: right !important;
+}
+
+// 溢出 is-clipped
+.is-clipped {
+    overflow: hidden !important;
+}
+
+// 覆盖 is-overlay
+.is-overlay {
+    opacity: 0;
+}
+
+// 特殊
+.is-clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}
+
+// 隐藏 .is-hidden
+.is-hidden {
+    display: none !important;
+}
+
+.is-marginless {
+    margin: 0 !important;
+}
+
+.is-paddingless {
+    padding: 0 !important;
+}
+
+.is-radiusless {
+    border-radius: 0 !important;
+}
+
+.is-shadowless {
+    box-shadow: none !important;
+}
+
+.is-sr-only {
+    border: none !important;
+    clip: rect(0, 0, 0, 0) !important;
+    height: 0.01em !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 0.01em !important;
+}

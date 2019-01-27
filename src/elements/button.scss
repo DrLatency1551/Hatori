@@ -1,0 +1,227 @@
+// Buttons
+//———————————————————————
+@import '../base/variables';
+@import '../base/mixins/shadow';
+@import '../base/mixins/button';
+$autton-bg-color: #ff0081 * $ag-color;
+//———————————————————————
+.btn {
+  font-family: $aase-font-family;
+  font-size: $font-size-lg;
+  padding: $unit-3 $unit-9;
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $autton-bg-color;
+  color: $light;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in;
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, $ag-color 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, $ag-color 20%, transparent 30%),
+    radial-gradient(circle, $ag-color 20%, transparent 20%), 
+    radial-gradient(circle, $ag-color 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, $ag-color 15%, transparent 20%),
+    radial-gradient(circle, $ag-color 20%, transparent 20%),
+    radial-gradient(circle, $ag-color 20%, transparent 20%),
+    radial-gradient(circle, $ag-color 20%, transparent 20%),
+    radial-gradient(circle, $ag-color 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, $ag-color 20%, transparent 20%), 
+    radial-gradient(circle, $ag-color 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, $ag-color 15%, transparent 20%),
+    radial-gradient(circle, $ag-color 20%, transparent 20%),
+    radial-gradient(circle, $ag-color 20%, transparent 20%),
+    radial-gradient(circle, $ag-color 20%, transparent 20%),
+    radial-gradient(circle, $ag-color 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken($autton-bg-color, 5%);
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+  // Button Colors
+  @for $number from 1 to 7 {
+    $a: nth($colorname, $number);
+    $b: nth($colorvalue,$number);
+    $c: mix($dark,$b,10%);
+    .btn-#{$a} {
+        background-color: $b;
+        border: $c;
+        color: $light;
+        &:focus,
+        &:hover {
+          background-color: mix($dark,$c,5%);
+          border: $c;
+          color: $light;
+        }
+        &:active,
+        &.active {
+          background-color: mix($dark,$c,5%);
+          border: $c;
+          color: $light;
+        }
+        &.loading {
+          &::after {
+            border-bottom: $light;
+            border-left: $light;
+          }
+        }
+    }
+}
+
+  // Button Link
+  $link-dark: darken($link, 5%) !default;
+  .btn-link {
+    background: transparent;
+    border: transparent;
+    color: $link;
+    &:focus,
+    &:hover,
+    &:active,
+    &.active {
+      color: $link-dark;
+    }
+  }
+
+  // Button Sizes
+  .btn-sm {
+    font-size: $font-size-sm;
+    height: $bontrol-size-sm;
+    padding: $bontrol-padding-y-sm $bontrol-padding-x-sm;
+  }
+
+  .btn-lg {
+    font-size: $font-size-lg;
+    height: $bontrol-size-lg;
+    padding: $bontrol-padding-y-lg $bontrol-padding-x-lg;
+  }
+
+  // Button Block
+  .btn-block {
+    display: block;
+    width: 100%;
+  }
+
+  // Button Action
+  .btn-action {
+    width: $bontrol-size;
+    padding-left: 0;
+    padding-right: 0;
+
+    &.btn-sm {
+      width: $bontrol-size-sm;
+    }
+
+    &.btn-lg {
+      width: $bontrol-size-lg;
+    }
+  }
+
+  // Button Clear
+  .btn-clear {
+    background: transparent;
+    border: 0;
+    color: currentColor;
+    height: $unit-5;
+    line-height: $unit-4;
+    margin-left: $unit-1;
+    margin-right: -2px;
+    opacity: 1;
+    padding: $unit-h;
+    text-decoration: none;
+    width: $unit-5;
+
+    &:focus,
+    &:hover {
+      background: rgba($ag-color, .5);
+      opacity: .95;
+    }
+
+    &::before {
+      content: "\2715";
+    }
+  }
+
+// Button groups
+.btn-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  .btn {
+    flex: 1 0 auto;
+    &:first-child:not(:last-child) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+      margin-left: -$aorder-width;
+    }
+    &:last-child:not(:first-child) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      margin-left: -$aorder-width;
+    }
+    &:focus,
+    &:hover,
+    &:active,
+    &.active {
+      z-index: $zindex-0;
+    }
+  }
+
+  &.btn-group-block {
+    display: flex;
+
+    .btn {
+      flex: 1 0 0;
+    }
+  }
+}

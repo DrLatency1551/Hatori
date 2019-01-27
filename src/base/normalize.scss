@@ -1,23 +1,24 @@
-@import 'font.scss';
-
+// 标准化
 //———————————————————————
-  ins,
-  u {
-    border-bottom: 1em solid;
-    text-decoration: none;
-  }
+@import 'variables';
+//———————————————————————
+ins,
+u {
+   border-bottom: 1em solid;
+   text-decoration: none;
+}
 
-  del + del,
-  del + s,
-  ins + ins,
-  ins + u,
-  s + del,
-  s + s,
-  u + ins,
-  u + u {
-    margin-left: .125em;
-  }
-  
+del+del,
+del+s,
+ins+ins,
+ins+u,
+s+del,
+s+s,
+u+ins,
+u+u {
+   margin-left: .125em;
+}
+
 //———————————————————————
 /* Manually forked from Normalize.css */
 /* normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -33,12 +34,12 @@
    ========================================================================== */
 
 html {
-    font-family: $base-font-family;
-    /* 1 */
-    -ms-text-size-adjust: 100%;
-    /* 3 */
-    -webkit-text-size-adjust: 100%;
-    /* 3 */
+   font-family: $aase-font-family;
+   /* 1 */
+   -ms-text-size-adjust: 100%;
+   /* 3 */
+   -webkit-text-size-adjust: 100%;
+   /* 3 */
 }
 
 /* Sections
@@ -49,7 +50,7 @@ html {
    */
 
 body {
-    margin: 0;
+   margin: 0;
 }
 
 /**
@@ -62,7 +63,7 @@ footer,
 header,
 nav,
 section {
-    display: block;
+   display: block;
 }
 
 /**
@@ -71,8 +72,8 @@ section {
    */
 
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+   font-size: 2em;
+   margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -86,8 +87,8 @@ h1 {
 figcaption,
 figure,
 main {
-    /* 1 */
-    display: block;
+   /* 1 */
+   display: block;
 }
 
 /**
@@ -100,12 +101,12 @@ main {
    */
 
 hr {
-    box-sizing: content-box;
-    /* 1 */
-    height: 0;
-    /* 1 */
-    overflow: visible;
-    /* 2 */
+   box-sizing: content-box;
+   /* 1 */
+   height: 0;
+   /* 1 */
+   overflow: visible;
+   /* 2 */
 }
 
 /**
@@ -122,10 +123,10 @@ hr {
    */
 
 a {
-    background-color: transparent;
-    /* 1 */
-    -webkit-text-decoration-skip: objects;
-    /* 2 */
+   background-color: transparent;
+   /* 1 */
+   -webkit-text-decoration-skip: objects;
+   /* 2 */
 }
 
 /**
@@ -135,7 +136,7 @@ a {
 
 a:active,
 a:hover {
-    outline-width: 0;
+   outline-width: 0;
 }
 
 /**
@@ -143,7 +144,7 @@ a:hover {
    */
 
 address {
-    font-style: normal;
+   font-style: normal;
 }
 
 /**
@@ -157,7 +158,7 @@ address {
 
 b,
 strong {
-    font-weight: inherit;
+   font-weight: inherit;
 }
 
 /**
@@ -166,7 +167,7 @@ strong {
 
 b,
 strong {
-    font-weight: bolder;
+   font-weight: bolder;
 }
 
 /**
@@ -177,10 +178,10 @@ code,
 kbd,
 pre,
 samp {
-    font-family: $mono-font-family;
-    /* 1 (changed) */
-    font-size: 1em;
-    /* 2 */
+   font-family: $mono-font-family;
+   /* 1 (changed) */
+   font-size: 1em;
+   /* 2 */
 }
 
 /**
@@ -188,7 +189,7 @@ samp {
    */
 
 dfn {
-    font-style: italic;
+   font-style: italic;
 }
 
 /**
@@ -200,9 +201,9 @@ dfn {
    */
 
 small {
-    font-size: 80%;
-    font-weight: 400;
-    /* (added) */
+   font-size: 80%;
+   font-weight: 400;
+   /* (added) */
 }
 
 /**
@@ -212,18 +213,18 @@ small {
 
 sub,
 sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+   font-size: 75%;
+   line-height: 0;
+   position: relative;
+   vertical-align: baseline;
 }
 
 sub {
-    bottom: -0.25em;
+   bottom: -0.25em;
 }
 
 sup {
-    top: -0.5em;
+   top: -0.5em;
 }
 
 /* Embedded content
@@ -235,7 +236,7 @@ sup {
 
 audio,
 video {
-    display: inline-block;
+   display: inline-block;
 }
 
 /**
@@ -243,8 +244,8 @@ video {
    */
 
 audio:not([controls]) {
-    display: none;
-    height: 0;
+   display: none;
+   height: 0;
 }
 
 /**
@@ -252,7 +253,7 @@ audio:not([controls]) {
    */
 
 img {
-    border-style: none;
+   border-style: none;
 }
 
 /**
@@ -260,7 +261,7 @@ img {
    */
 
 svg:not(:root) {
-    overflow: hidden;
+   overflow: hidden;
 }
 
 /* Forms
@@ -276,14 +277,14 @@ input,
 optgroup,
 select,
 textarea {
-    font-family: inherit;
-    /* 1 (changed) */
-    font-size: inherit;
-    /* 1 (changed) */
-    line-height: inherit;
-    /* 1 (changed) */
-    margin: 0;
-    /* 2 */
+   font-family: inherit;
+   /* 1 (changed) */
+   font-size: inherit;
+   /* 1 (changed) */
+   line-height: inherit;
+   /* 1 (changed) */
+   margin: 0;
+   /* 2 */
 }
 
 /**
@@ -293,8 +294,8 @@ textarea {
 
 button,
 input {
-    /* 1 */
-    overflow: visible;
+   /* 1 */
+   overflow: visible;
 }
 
 /**
@@ -304,8 +305,8 @@ input {
 
 button,
 select {
-    /* 1 */
-    text-transform: none;
+   /* 1 */
+   text-transform: none;
 }
 
 /**
@@ -319,8 +320,8 @@ html [type="button"],
 /* 1 */
 [type="reset"],
 [type="submit"] {
-    -webkit-appearance: button;
-    /* 2 */
+   -webkit-appearance: button;
+   /* 2 */
 }
 
 /**
@@ -331,8 +332,8 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
+   border-style: none;
+   padding: 0;
 }
 
 /**
@@ -345,9 +346,9 @@ button::-moz-focus-inner,
    */
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+   border: 0;
+   margin: 0;
+   padding: 0;
 }
 
 /**
@@ -358,18 +359,18 @@ fieldset {
    */
 
 legend {
-    box-sizing: border-box;
-    /* 1 */
-    color: inherit;
-    /* 2 */
-    display: table;
-    /* 1 */
-    max-width: 100%;
-    /* 1 */
-    padding: 0;
-    /* 3 */
-    white-space: normal;
-    /* 1 */
+   box-sizing: border-box;
+   /* 1 */
+   color: inherit;
+   /* 2 */
+   display: table;
+   /* 1 */
+   max-width: 100%;
+   /* 1 */
+   padding: 0;
+   /* 3 */
+   white-space: normal;
+   /* 1 */
 }
 
 /**
@@ -378,10 +379,10 @@ legend {
    */
 
 progress {
-    display: inline-block;
-    /* 1 */
-    vertical-align: baseline;
-    /* 2 */
+   display: inline-block;
+   /* 1 */
+   vertical-align: baseline;
+   /* 2 */
 }
 
 /**
@@ -389,7 +390,7 @@ progress {
    */
 
 textarea {
-    overflow: auto;
+   overflow: auto;
 }
 
 /**
@@ -399,10 +400,10 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-    box-sizing: border-box;
-    /* 1 */
-    padding: 0;
-    /* 2 */
+   box-sizing: border-box;
+   /* 1 */
+   padding: 0;
+   /* 2 */
 }
 
 /**
@@ -411,7 +412,7 @@ textarea {
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-    height: auto;
+   height: auto;
 }
 
 /**
@@ -420,10 +421,10 @@ textarea {
    */
 
 [type="search"] {
-    -webkit-appearance: textfield;
-    /* 1 */
-    outline-offset: -2px;
-    /* 2 */
+   -webkit-appearance: textfield;
+   /* 1 */
+   outline-offset: -2px;
+   /* 2 */
 }
 
 /**
@@ -432,7 +433,7 @@ textarea {
 
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+   -webkit-appearance: none;
 }
 
 /**
@@ -441,10 +442,10 @@ textarea {
    */
 
 ::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    /* 1 */
-    font: inherit;
-    /* 2 */
+   -webkit-appearance: button;
+   /* 1 */
+   font: inherit;
+   /* 2 */
 }
 
 /* Interactive
@@ -458,7 +459,7 @@ textarea {
 details,
 /* 1 */
 menu {
-    display: block;
+   display: block;
 }
 
 /*
@@ -466,8 +467,8 @@ menu {
    */
 
 summary {
-    display: list-item;
-    outline: none;
+   display: list-item;
+   outline: none;
 }
 
 /* Scripting
@@ -478,7 +479,7 @@ summary {
    */
 
 canvas {
-    display: inline-block;
+   display: inline-block;
 }
 
 /**
@@ -486,7 +487,7 @@ canvas {
    */
 
 template {
-    display: none;
+   display: none;
 }
 
 /* Hidden
@@ -497,5 +498,5 @@ template {
    */
 
 [hidden] {
-    display: none;
+   display: none;
 }

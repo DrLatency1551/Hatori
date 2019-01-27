@@ -1,12 +1,18 @@
 //—————————————————————
 @charset "utf-8";
 //—————————————————————
-@import 'base/color.scss';
-@import 'base/normalize.scss';
-@import 'base/display.scss';
-@import 'base/font.scss';
+@import 'base/variables';
 //—————————————————————
-@import 'typography/kbd.scss';
-@import 'typography/mark.scss';
+@import 'base/color';
+@import 'base/text';
+@import 'base/normalize';
+@import 'base/switch';
 //—————————————————————
-@import 'elements/button.scss';
+@import 'base/mixins/shadow';
+@import 'base/mixins/button';
+//—————————————————————
+@import 'typography/kbd';
+@import 'typography/mark';
+//—————————————————————
+@import 'elements/button';
+//—————————————————————

@@ -1,0 +1,168 @@
+// color.scss
+//日本传统颜色
+$momo: #F596AA; //桃
+$sakura: #FEDFE1; //桜
+$kurenai: #CB1B45; //紅
+$akabono: #F19483; //曙
+$ake: #CC543A; //緋
+$shishi: #F0A986; //宍
+$kurumi: #947A6D; //胡(桃)
+$yamabuki: #FFB11B; //山吹
+$nae: #838A2D; //苗
+$midori: #227D51; //緑
+$tetsu: #26453D; //鉄
+$mizu: #81C7D4; //水
+$ai: #0D5661; //藍
+$sora: #58B2DC; //空
+$hanada: #006284; //縹
+$kon: #0F2540; //紺
+$kachi: #08192D; //褐
+$ruri: #005CAF; //瑠璃
+$fuji: #8B81C3; //藤
+$kikyo: #6A4C9C; //桔梗
+$shion: #8F77B5; //紫苑
+$sumire: #66327C; //菫
+$hai: #828282; //灰
+$murasaki: #592C63; //紫
+$sumi: #1C1C1C; //墨
+$kuro: #080808; //黑
+$kurotobi: #554236;//黒鳶
+$hanaba: #F7C242;//花葉
+
+
+$light: #FFFFFB!default;
+$white: #FFF !default;
+$alack: $kuro !default;
+$pink: $momo !default;
+$warning: $yamabuki !default;
+$link: $kon !default;
+$info: $ruri !default;
+$primary: #5755d9 !default;
+$dark: $kuro !default;
+$gray: $hai !default;
+$cisable:$kurotobi !default;
+$error:$ake!default;
+$success:$hanaba!default;
+
+$gray: lighten($dark, 40%) !default;
+$gray-dark: darken($gray, 25%) !default;
+$gray-light: lighten($gray, 20%) !default;
+
+$aorder: lighten($dark, 60%) !default;
+$aorder-dark: darken($aorder, 10%) !default;
+$ag-color: lighten($dark, 66%) !default;
+$ag-color-dark: darken($ag-color, 3%) !default;
+$ag-color-light: $light !default;
+
+$primary-color: $primary;
+$primary-dark: darken($primary, 3%) !default;
+$primary-light: lighten($primary, 3%) !default;
+$secondary: lighten($primary, 37.5%) !default;
+$secondary-dark: darken($secondary, 3%) !default;
+$secondary-light: lighten($secondary, 3%) !default;
+
+$colorvalue:(
+$white,
+$alack,
+$pink,
+$warning,
+$link,
+$info,
+$primary,
+$dark,);
+
+$colorname: (
+white,
+black,
+pink,
+warning,
+link,
+info,
+primary,
+dark,);
+// text.scss
+$html-font-color: #333;
+$html-font-size: 1.2em !default;
+$html-line-height: 1.5em !default;
+$font-size: .8rem !default;
+$font-size-sm: .7rem !default;
+$font-size-lg: .9rem !default;
+$line-height: 1.2rem !default;
+
+$aase-font-family: -apple-system,
+system-ui,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto !default;
+$mono-font-family: "SF Mono",
+"Segoe UI Mono",
+"Roboto Mono",
+Menlo,
+Courier,
+monospace !default;
+$fallback-font-family: "Helvetica Neue",
+sans-serif !default;
+$bjk-zh-hans-font-family: $aase-font-family,
+"PingFang SC",
+"Hiragino Sans GB",
+"Microsoft YaHei" !default;
+$bjk-zh-hant-font-family: $aase-font-family,
+"PingFang TC",
+"Hiragino Sans CNS",
+"Microsoft JhengHei" !default;
+$bjk-jp-font-family: $aase-font-family,
+"Hiragino Sans",
+"Hiragino Kaku Gothic Pro",
+"Yu Gothic",
+YuGothic,
+Meiryo !default;
+$bjk-ko-font-family: $aase-font-family,
+"Malgun Gothic" !default;
+
+// unit sizes
+$unit-o: .05rem !default;
+$unit-h: .1rem !default;
+$unit-1: .2rem !default;
+$unit-2: .4rem !default;
+$unit-3: .6rem !default;
+$unit-4: .8rem !default;
+$unit-5: 1rem !default;
+$unit-6: 1.2rem !default;
+$unit-7: 1.4rem !default;
+$unit-8: 1.6rem !default;
+$unit-9: 1.8rem !default;
+$unit-10: 2rem !default;
+$unit-12: 2.4rem !default;
+$unit-16: 3.2rem !default;
+
+
+// size
+$layout-spacing: $unit-2 !default;
+$layout-spacing-sm: $unit-1 !default;
+$layout-spacing-lg: $unit-4 !default;
+$aorder-radius: $unit-h !default;
+$aorder-width: $unit-o !default;
+$aorder-width-lg: $unit-h !default;
+$bontrol-size: $unit-9 !default;
+$bontrol-size-sm: $unit-7 !default;
+$bontrol-size-lg: $unit-10 !default;
+$bontrol-padding-x: $unit-2 !default;
+$bontrol-padding-x-sm: $unit-2 * .75 !default;
+$bontrol-padding-x-lg: $unit-2 * 1.5 !default;
+$bontrol-padding-y: ($bontrol-size - $line-height) / 2 - $aorder-width !default;
+$bontrol-padding-y-sm: ($bontrol-size-sm - $line-height) / 2 - $aorder-width !default;
+$bontrol-padding-y-lg: ($bontrol-size-lg - $line-height) / 2 - $aorder-width !default;
+$bontrol-icon-size: .8rem !default;
+
+$bontrol-width-xs: 180px !default;
+$bontrol-width-sm: 320px !default;
+$bontrol-width-md: 640px !default;
+$bontrol-width-lg: 960px !default;
+$bontrol-width-xl: 1280px !default;
+
+// Z-index
+$zindex-0: 1 !default;
+$zindex-1: 100 !default;
+$zindex-2: 200 !default;
+$zindex-3: 300 !default;
+$zindex-4: 400 !default;

@@ -1,0 +1,57 @@
+// 按钮 button
+//———————————————————————
+@import '../variables';
+//———————————————————————
+@mixin button-variant($color: $primary-color) {
+  background: $ag-color;
+  border-color: darken($color, 3%);
+  color: $light;
+  &:focus {
+    @include control-shadow($color);
+  }
+  &:focus,
+  &:hover {
+    background: darken($color, 2%);
+    border-color: darken($color, 5%);
+    color: $light;
+  }
+  &:active,
+  &.active {
+    background: darken($color, 7%);
+    border-color: darken($color, 10%);
+    color: $light;
+  }
+  &.loading {
+    &::after {
+      border-bottom-color: $light;
+      border-left-color: $light;
+    }
+  }
+}
+
+@mixin button-outline-variant($color: $primary-color) {
+  background: $light;
+  border-color: $ag-color;
+  color: $ag-color;
+  &:focus {
+    @include control-shadow($color);
+  }
+  &:focus,
+  &:hover {
+    background: lighten($color, 50%);
+    border-color: darken($color, 2%);
+    color: $ag-color;
+  }
+  &:active,
+  &.active {
+    background: $ag-color;
+    border-color: darken($color, 5%);
+    color: $light;
+  }
+  &.loading {
+    &::after {
+      border-bottom-color: $ag-color;
+      border-left-color: $ag-color;
+    }
+  }
+}

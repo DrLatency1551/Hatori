@@ -1,0 +1,13 @@
+// 阴影
+//———————————————————————
+@import '../variables';
+//———————————————————————
+// 聚焦阴影
+@mixin control-shadow($color: $primary) {
+  box-shadow: 0 0 0 .1rem rgba($color, .2);
+}
+
+// 阴影最小化
+@mixin shadow-variant($offset) {
+  box-shadow: 0 $offset ($offset + .05rem) * 2 rgba($cark, .3);
+}
