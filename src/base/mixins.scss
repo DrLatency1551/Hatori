@@ -1,0 +1,226 @@
+// Mixins.scss
+//———————————————————————
+@import 'variables';
+//———————————————————————
+
+// 按钮 button
+// 按钮动态效果
+@mixin button-variant($color: $primary-color) {
+  background: $bg-color;
+  border-color: darken($color, 3%);
+  color: $light;
+  &:focus {
+    @include control-shadow($color);
+  }
+  &:focus,
+  &:hover {
+    background: darken($color, 2%);
+    border-color: darken($color, 5%);
+    color: $light;
+  }
+  &:active,
+  &.active {
+    background: darken($color, 7%);
+    border-color: darken($color, 10%);
+    color: $light;
+  }
+  &.loading {
+    &::after {
+      border-bottom-color: $light;
+      border-left-color: $light;
+    }
+  }
+}
+
+// 按钮outline动态效果
+@mixin button-outline-variant($color: $primary-color) {
+  background: $light;
+  border-color: $bg-color;
+  color: $bg-color;
+  &:focus {
+    @include control-shadow($color);
+  }
+  &:focus,
+  &:hover {
+    background: lighten($color, 50%);
+    border-color: darken($color, 2%);
+    color: $bg-color;
+  }
+  &:active,
+  &.active {
+    background: $bg-color;
+    border-color: darken($color, 5%);
+    color: $light;
+  }
+  &.loading {
+    &::after {
+      border-bottom-color: $bg-color;
+      border-left-color: $bg-color;
+    }
+  }
+}
+
+@mixin button-small {
+  border-radius: $radius-small;
+  font-size: $unit-4;
+}
+
+@mixin button-medium {
+  font-size: $unit-6;
+}
+
+@mixin button-large {
+  font-size: $unit-8;
+}
+
+// 过度变化
+@mixin transition($prop, $time) {
+  transition: $prop $time ease;
+}
+
+// 微弱阴影
+@mixin shadow-variant($offset) {
+  box-shadow: 0 $offset ($offset + .05rem) * 2 rgba($cark, .3);
+}
+
+// 适应化
+
+@mixin from($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
+@mixin until($device) {
+  @media screen and (max-width: $device - 1px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $tablet - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet), print {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    @content;
+  }
+}
+
+@mixin touch {
+  @media screen and (max-width: $desktop - 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @if $widescreen-enabled {
+    @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px) {
+      @content;
+    }
+  }
+}
+
+@mixin until-widescreen {
+  @if $widescreen-enabled {
+    @media screen and (max-width: $widescreen - 1px) {
+      @content;
+    }
+  }
+}
+
+@mixin widescreen {
+  @if $widescreen-enabled {
+    @media screen and (min-width: $widescreen) {
+      @content;
+    }
+  }
+}
+
+@mixin widescreen-only {
+  @if $widescreen-enabled and $fullhd-enabled {
+    @media screen and (min-width: $widescreen) and (max-width: $fullhd - 1px) {
+      @content;
+    }
+  }
+}
+
+@mixin until-fullhd {
+  @if $fullhd-enabled {
+    @media screen and (max-width: $fullhd - 1px) {
+      @content;
+    }
+  }
+}
+
+@mixin fullhd {
+  @if $fullhd-enabled {
+    @media screen and (min-width: $fullhd) {
+      @content;
+    }
+  }
+}
+
+@mixin control {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  border: $control-border-width solid transparent;
+  border-radius: $control-radius;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: $font-size;
+  height: $control-height;
+  justify-content: flex-start;
+  line-height: $control-line-height;
+  padding-bottom: $control-padding-vertical;
+  padding-left: $control-padding-horizontal;
+  padding-right: $control-padding-horizontal;
+  padding-top: $control-padding-vertical;
+  position: relative;
+  vertical-align: top;
+
+  // States
+  &:focus,
+  &.is-focused,
+  &:active,
+  &.is-active {
+    outline: none;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+%control {
+  @include control;
+}
+
+// The controls sizes use mixins so they can be used at different breakpoints
+@mixin control-small {
+  border-radius: $control-radius-small;
+  font-size: $unit-4;
+}
+
+@mixin control-medium {
+  font-size: $unit-6;
+}
+
+@mixin control-large {
+  font-size: $unit-7;
+}

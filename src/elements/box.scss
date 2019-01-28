@@ -1,6 +1,6 @@
 //———————————————————————
 @import '../base/variables';
-@import '../base/mixins/shadow';
+@import '../base/mixins';
 //———————————————————————
 $box-color: $font-color !default;
 $box-background-color: $white !default;
@@ -8,12 +8,11 @@ $box-radius: $border-radius !default;
 $box-padding: 1.25rem !default;
 
 .box{
- background-color: $box-background-color;
+  background-color: $box-background-color;
   border-radius: $box-radius;
   color: $box-color;
   display: block;
   padding: $box-padding;
 }
 a.box{
-@include control-shadow();
 }

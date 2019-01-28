@@ -1,53 +1,51 @@
 // shadow
 //———————————————————————
 @import '../base/variables';
-@import '../base/mixins/shadow';
+@import '../base/mixins';
 
 //———————————————————————
 .has-shadow {
-    box-shadow: 4px 4px 20px 2px rgba($black, 0.15);
+    box-shadow: 4px 4px 20px 2px rgba($black, 0.1);
 }
 
 .has-allshadow {
-    box-shadow: 4px 4px 20px 2px rgba($black, 0.15);
+    box-shadow: 4px 4px 20px 2px rgba($black, 0.1);
 
     &:hover {
-        box-shadow: 4px 4px 20px 2px rgba($black, 0.35);
-    }
-}
-
-.has-shadow-blue {
-    box-shadow: 0px 4px 30px rgba($link, 0.4);
-
-    &:hover {
-        box-shadow: 0px 7px 30px rgba($info, 0.75);
-    }
-}
-
-.has-allshadow-blue {
-    box-shadow: 0px 4px 30px rgba($link, 0.4);
-}
-
-.has-shadow-red {
-    box-shadow: 0px 4px 30px rgba($error, 0.15);
-}
-
-.has-allshadow-red {
-    box-shadow: 0px 4px 30px rgba($error, 0.15);
-
-    &:hover {
-        box-shadow: 0px 7px 30px rgba($error, 0.35);
+        box-shadow: 4px 4px 20px 2px rgba($black, 0.2);
     }
 }
 
 .has-shadow-card {
-    box-shadow: 0 8px 17px 0 rgba($black, .2), 0 6px 20px 0 rgba($black, .15);
+    box-shadow: 0 8px 17px 0 rgba($black, .2), 0 6px 20px 0 rgba($black, .1);
 }
 
 .has-allshadow-card {
-    box-shadow: 0 8px 17px 0 rgba($black, .2), 0 6px 20px 0 rgba($black, .15);
+    box-shadow: 0 8px 17px 0 rgba($black, .2), 0 6px 20px 0 rgba($black, .1);
 
     &:hover {
-        box-shadow: 0 8px 17px 0 rgba($black, .4), 0 6px 20px 0 rgba($black, .3);
+        box-shadow: 0 8px 17px 0 rgba($black, .4), 0 6px 20px 0 rgba($black, .2);
+    }
+}
+
+@for $number from 1 to 9 {
+    $a: nth($colorname, $number);
+    $b: nth($colorvalue, $number);
+
+    .has-shadow-#{$a} {
+        box-shadow: 0px 7px 30px rgba($b, 0.2);
+    }
+}
+
+@for $number from 1 to 9 {
+    $a: nth($colorname, $number);
+    $b: nth($colorvalue, $number);
+
+    .has-allshadow-#{$a} {
+        box-shadow: 0 8px 17px 0 rgba($b, .2), 0 6px 20px 0 rgba($b, .1);
+
+        &:hover {
+            box-shadow: 0 8px 17px 0 rgba($b, .4), 0 6px 20px 0 rgba($b, .2);
+        }
     }
 }
